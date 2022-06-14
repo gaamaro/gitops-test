@@ -6,7 +6,11 @@ platform:
   arch: amd64
 
 steps:
-- name: check-Dockerfile
+- name: node-service
   image: golang
-  settings:
-  - go test 
+  commands:
+  - go build
+  - go test
+  when:
+    branch:
+    - master
