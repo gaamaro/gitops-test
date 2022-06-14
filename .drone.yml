@@ -14,3 +14,11 @@ steps:
   when:
     branch:
     - master
+
+- name: build
+  image: plugins/docker
+    repo: gaamaro/node-service
+    username: gaamaro
+    password: "@Hqiq00vx"
+    when:
+      branch: master
